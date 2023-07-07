@@ -18,24 +18,15 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from .import views,Admin_Views
+from app import views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('base/',views.BASE,name='base'),
-
-    # login path
-    path('',views.LOGIN,name='login'),
-    path('doLogin',views.doLogin,name='doLogin'),
-    path('doLogout',views.doLogout,name='doLogout'),
-
-
-
-    # This is Admin Panel Url
-    path('Admin/Home',Admin_Views.HOME,name='admin_home'),
-    path('Admin/Index',Admin_Views.INDEX,name='index_home'),
-    path('Admin/Index1',Admin_Views.INDEX1,name='index1_home'),
+    
+    path('',views.HOME,name='admin_home'),
+    path('Admin/Index',views.INDEX,name='index_home'),
+    path('Admin/Index1',views.INDEX1,name='index1_home'),
 
    
 

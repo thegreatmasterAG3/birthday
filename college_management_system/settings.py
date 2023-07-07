@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
-    'active_link',
+    
 ]
 
 MIDDLEWARE = [
@@ -134,4 +134,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
-AUTH_USER_MODEL = 'app.CustomUser'
